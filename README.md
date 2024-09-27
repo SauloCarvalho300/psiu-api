@@ -3,8 +3,10 @@
 ## Requisitos
 
 ### Aluno
-- [] Cadastrar um aluno
- - [] Não deve ser possível cadastrar RA já cadastrado
+- [X] Cadastrar um aluno
+ - [X] Não deve ser possível cadastrar RA já cadastrado
+ - [X] Gerar senha aleatória para primeiro acesso
+ - [] Criar hash para a senha aleatória gerada
 
 - [] Editar aluno
  - [] Deve ser possível alterar o nome e data de nascimento do aluno
