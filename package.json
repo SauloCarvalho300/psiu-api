@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --transpile-only src/http/server.ts"
+    "dev": "tsx watch src/http/server.ts"
   },
   "keywords": [],
   "author": "",
@@ -18,8 +18,8 @@
     "@types/node": "^22.7.2",
     "eslint": "^8.57.1",
     "eslint-plugin-simple-import-sort": "^12.1.1",
-    "ts-node": "^10.9.2",
-    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.19.1",
     "typescript": "^5.6.2"
   }
 }

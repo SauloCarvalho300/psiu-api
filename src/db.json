@@ -1,0 +1,11 @@
+{
+  "students": [
+    {
+      "id": "2efdb5b9-a6a2-400b-8ab2-34baa7692a3b",
+      "ra": "333322222",
+      "name": "Saulo",
+      "password": "lQjD24",
+      "birthdate": "1970-01-01T00:00:00.022Z"
+    }
+  ]
+}
