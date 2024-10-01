@@ -6,18 +6,19 @@
 - [X] Cadastrar um aluno
  - [X] Não deve ser possível cadastrar RA já cadastrado
  - [X] Gerar senha aleatória para primeiro acesso
- - [] Criar hash para a senha aleatória gerada
+  - [] Criar hash para a senha aleatória gerada
 
-- [] Editar aluno
- - [] Deve ser possível alterar o nome e data de nascimento do aluno
+- [X] Editar aluno
+  - [X] Deve ser possível alterar o nome e data de nascimento do aluno
 
 - [] Atualizar senha
- - [] Não deve ser possível colocar uma senha fraca
+  - [] Não deve ser possível colocar uma senha fraca
 
-- [] Deletar aluno
- - [] Deve utilizar soft delete
+- [X] Deletar aluno
+  - [X] Deve utilizar soft delete
  
-- [] Buscar alunos
+- [X] Buscar alunos
+  - [] Criar páginação na busca de alunis
 
 ### Post
 

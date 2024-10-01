@@ -32,6 +32,9 @@ export async function createStudent(
     name,
     password: generatePassword(),
     birthdate: new Date(birthdate),
+    active: true,
+    createdAT: new Date(),
+    updatedAT: new Date(),
   }
 
   db.insert('students', student)
