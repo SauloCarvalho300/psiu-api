@@ -11,6 +11,17 @@ export async function inactivateStudent(
 ): Promise<void> {
   const { id } = request.params
 
+  const student = db.findUnique('students', { id })
+
+  if (!student) {
+    response.status(400).json({
+      result: 'error',
+      message: 'Student not found',
+    })
+
+    return
+  }
+
   db.update('students', id, {
     active: false,
     updatedAT: new Date(),

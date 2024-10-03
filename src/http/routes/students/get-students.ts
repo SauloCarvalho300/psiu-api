@@ -5,7 +5,7 @@ export async function getStudents(
   request: Request,
   response: Response,
 ): Promise<void> {
-  const students = db.select('students', { active: true })
+  const students = db.findMany('students', { active: true })
 
   response.json({
     result: 'sucess',

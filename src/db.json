@@ -1,1 +1,14 @@
-{"students":[{"id":"2890b9f8-d7e0-4911-85ea-28bd661c0087","ra":"9294479","name":"Batan","password":"J1gILX","birthdate":"2002-10-07T00:00:00.000Z","active":false,"createdAT":"2024-10-01T01:35:27.758Z","updatedAT":"2024-10-01T01:44:47.891Z"},{"id":"2e287990-af5b-48fa-b93d-d5ebe1f3799a","ra":"8294479","name":"Saulo Carvalho","password":"m6Uz6O","birthdate":"2002-02-06T00:00:00.000Z","active":false,"createdAT":"2024-10-01T01:35:58.787Z","updatedAT":"2024-10-01T01:45:19.774Z"},{"id":"0df3f355-1a5d-441a-a2d2-c1c645bb6ad0","ra":"82944791","name":"Saulo Carvalho","password":"ynqQHP","birthdate":"2002-02-06T00:00:00.000Z","active":false,"createdAT":"2024-10-01T01:46:03.735Z","updatedAT":"2024-10-01T01:46:19.441Z"}]}
+{
+  "students": [
+    {
+      "id": "a1fa2fe0-f615-45d2-937c-2b97584be460",
+      "ra": "81479155",
+      "name": "Saulo",
+      "passwordHash": "$2b$10$Ms9oaGmEO0S/kEMW2luCP.CYaV62E1UsBsxlHbw9Bnos/q2HprjcW",
+      "birthdate": "2002-02-06T00:00:00.000Z",
+      "active": true,
+      "createdAT": "2024-10-03T00:51:12.632Z",
+      "updatedAT": "2024-10-03T00:51:12.632Z"
+    }
+  ]
+}
