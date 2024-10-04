@@ -1,14 +1,1 @@
-{
-  "students": [
-    {
-      "id": "a1fa2fe0-f615-45d2-937c-2b97584be460",
-      "ra": "81479155",
-      "name": "Saulo",
-      "passwordHash": "$2b$10$Ms9oaGmEO0S/kEMW2luCP.CYaV62E1UsBsxlHbw9Bnos/q2HprjcW",
-      "birthdate": "2002-02-06T00:00:00.000Z",
-      "active": true,
-      "createdAT": "2024-10-03T00:51:12.632Z",
-      "updatedAT": "2024-10-03T00:51:12.632Z"
-    }
-  ]
-}
+{"students":[{"id":"ad1e3848-0549-4f3a-a5e0-86d6aecb271a","ra":"RA123456","name":"DALE DALE","passwordHash":"$2b$10$E9OV9Al7hE1Ntx0bpNGrg.07ojnXRJVcadtm1uj7cYK.5zp/pG9JW","birthdate":"2002-02-06T00:00:00.000Z","active":true,"createdAT":"2024-10-04T01:11:08.351Z","updatedAT":"2024-10-04T01:11:08.351Z"}]}

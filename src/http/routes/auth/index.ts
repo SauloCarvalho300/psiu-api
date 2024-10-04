@@ -4,6 +4,6 @@ import { authenticateWithPassword } from './authenticate-with-password'
 
 const authRouter = Router()
 
-authRouter.post('/paswword', authenticateWithPassword)
+authRouter.post('/password', authenticateWithPassword)
 
 export { authRouter }

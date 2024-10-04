@@ -1,6 +1,5 @@
 import { db } from '@database/client'
 import { encrytPassword } from '@lib/bcrypt'
-import { generatePassword } from '@utils/generate-random-password'
 import { randomUUID } from 'crypto'
 import { Request, Response } from 'express'
 
@@ -27,8 +26,7 @@ export async function createStudent(
     return
   }
 
-  const password = generatePassword()
-  const passwordEncrypt = await encrytPassword(password)
+  const passwordEncrypt = await encrytPassword('123456')
 
   const student = {
     id: randomUUID(),
