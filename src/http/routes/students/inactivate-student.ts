@@ -9,9 +9,9 @@ export async function inactivateStudent(
   request: Request<Params>,
   response: Response,
 ): Promise<void> {
-  const { id } = request.params
+  const { studentId } = request
 
-  const student = db.findUnique('students', { id })
+  const student = db.findUnique('students', { id: studentId })
 
   if (!student) {
     response.status(400).json({
@@ -22,7 +22,7 @@ export async function inactivateStudent(
     return
   }
 
-  db.update('students', id, {
+  db.update('students', studentId, {
     active: false,
     updatedAT: new Date(),
   })
