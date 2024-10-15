@@ -1,5 +1,5 @@
 import { db } from '@database/client'
-import { checkPassword } from '@lib/bcrypt'
+import { checkPassword, encrytPassword } from '@lib/bcrypt'
 import { Request, Response } from 'express'
 
 interface Body {
@@ -8,7 +8,7 @@ interface Body {
   confirmNewPassword: string
 }
 
-export async function authenticateWithPassword(
+export async function updatePassword(
   request: Request,
   response: Response,
 ): Promise<void> {
@@ -20,7 +20,7 @@ export async function authenticateWithPassword(
   if (!student) {
     response.status(401).json({
       result: 'error',
-      message: ' Strudent not found',
+      message: ' Student not found',
     })
 
     return
@@ -31,8 +31,10 @@ export async function authenticateWithPassword(
   if (!passwordMatch) {
     response.status(401).json({
       result: 'error',
-      message: ' Incorrect password ',
+      message: 'Incorrect password ',
     })
+
+    return
   }
 
   if (newPassword !== confirmNewPassword) {
@@ -40,5 +42,32 @@ export async function authenticateWithPassword(
       result: 'error',
       message: 'Passwords do not macth',
     })
+
+    return
   }
+
+  if (
+    !newPassword.match(
+      /(?=^.{8,}$)((?=.*\d)(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/,
+    )
+  ) {
+    response.status(400).json({
+      result: 'error',
+      message: 'The new password is weak',
+    })
+
+    return
+  }
+
+  const passwordEncrypt = await encrytPassword(newPassword)
+
+  db.update('students', studentId, {
+    passwordHash: passwordEncrypt,
+    updatedAT: new Date(),
+  })
+
+  response.status(400).json({
+    result: 'success',
+    message: 'Passwords updated',
+  })
 }
