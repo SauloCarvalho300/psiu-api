@@ -38,11 +38,11 @@
 ### Post
 
 - [X] Criar post
-- [] Editar post
- - [] Deve ser possível editar o conteúdo do post
-- [] Deletar post
-- [] Buscar posts
-- [] Buscar posts por aluno
+- [X] Editar post
+ - [X] Deve ser possível editar o conteúdo do post
+- [X] Deletar post
+- [X] Buscar posts
+- [X] Buscar posts por aluno
 
 ### ComentarioPostagem
 

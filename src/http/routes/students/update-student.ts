@@ -1,17 +1,13 @@
 import { db } from '@database/client'
 import { Request, Response } from 'express'
 
-interface Params {
-  id: string
-}
-
 interface Body {
   name: string
   birthdate: string
 }
 
 export async function updateStudent(
-  request: Request<Params>,
+  request: Request,
   response: Response,
 ): Promise<void> {
   const { studentId } = request

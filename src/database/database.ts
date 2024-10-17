@@ -36,7 +36,7 @@ export class Database {
 
     if (where) {
       data = data.filter((row) => {
-        return Object.entries(where).some(([key, value]) => {
+        return Object.entries(where).every(([key, value]) => {
           if (typeof row[key] === 'boolean') return row[key] === value
 
           return row[key]?.includes(value)

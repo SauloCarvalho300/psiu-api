@@ -1,12 +1,8 @@
 import { db } from '@database/client'
 import { Request, Response } from 'express'
 
-interface Params {
-  id: string
-}
-
 export async function inactivateStudent(
-  request: Request<Params>,
+  request: Request,
   response: Response,
 ): Promise<void> {
   const { studentId } = request
