@@ -2,28 +2,33 @@ import { db } from '@database/client'
 import { Request, Response } from 'express'
 
 interface Params {
-  postId: string
+  commentId: string
 }
 
-export async function inactivatePost(
+interface Body {
+  content: string
+}
+
+export async function updateComment(
   request: Request<Params>,
   response: Response,
 ): Promise<void> {
   const { studentId } = request
-  const { postId } = request.params
+  const { commentId } = request.params
+  const { content } = request.body as Body
 
-  const post = db.findUnique('posts', { id: postId })
+  const comment = db.findUnique('comments', { id: commentId })
 
-  if (!post) {
+  if (!comment) {
     response.status(400).json({
       result: 'error',
-      message: 'Post not found',
+      message: 'Comment not found',
     })
 
     return
   }
 
-  if (post.studentId !== studentId) {
+  if (comment.studentId !== studentId) {
     response.status(401).json({
       result: 'error',
       message: 'Operation not allowed',
@@ -32,13 +37,13 @@ export async function inactivatePost(
     return
   }
 
-  db.update('posts', postId, {
-    active: false,
+  db.update('comments', commentId, {
+    content,
     updatedAt: new Date(),
   })
 
   response.json({
     result: 'success',
-    message: 'Post deleted',
+    message: 'Comment upated',
   })
 }

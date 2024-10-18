@@ -27,11 +27,11 @@ export async function updateStudent(
   db.update('students', studentId, {
     name,
     birthdate: new Date(birthdate),
-    updatedAT: new Date(),
+    updatedAt: new Date(),
   })
 
   response.json({
-    result: 'sucess',
-    message: 'Student updated',
+    result: 'success',
+    message: 'Student upated',
   })
 }

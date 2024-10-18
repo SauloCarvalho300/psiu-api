@@ -1,6 +1,6 @@
+import { authentication } from '@http/middlewares/auth'
 import { Router } from 'express'
 
-import { authentication } from '../../middlewares/auth'
 import { authenticateWithPassword } from './authenticate-with-password'
 import { updatePassword } from './update-password'
 

@@ -56,8 +56,8 @@ export async function authenticateWithPassword(
         ra: student.ra,
         name: student.name,
         birthdate: student.birthdate,
-        createdAT: student.birthdate,
-        updatedAT: student.birthdate,
+        createdAt: student.createdAt,
+        updatedAt: student.updatedAt,
       },
     },
   })

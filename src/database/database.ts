@@ -47,8 +47,6 @@ export class Database {
     return data
   }
 
-  // where = { id: 1 }
-
   // SELECT UNIQUE
   findUnique(table: string, where: Where): Row | null {
     const data = this.#database[table] ?? []
@@ -89,6 +87,7 @@ export class Database {
 
       return { id, ...data }
     }
+
     return null
   }
 

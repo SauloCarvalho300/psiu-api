@@ -20,11 +20,11 @@ export async function inactivateStudent(
 
   db.update('students', studentId, {
     active: false,
-    updatedAT: new Date(),
+    updatedAt: new Date(),
   })
 
   response.json({
-    result: 'sucess',
-    message: 'Student Inactivated',
+    result: 'success',
+    message: 'Student deleted',
   })
 }

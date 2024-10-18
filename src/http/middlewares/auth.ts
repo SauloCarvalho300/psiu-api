@@ -19,6 +19,7 @@ export async function authentication(
         result: false,
         message: 'Token is missing',
       })
+
       return
     }
 

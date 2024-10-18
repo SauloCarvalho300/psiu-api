@@ -1,5 +1,6 @@
 import { db } from '@database/client'
 import { encrytPassword } from '@lib/bcrypt'
+// import { generatePassword } from '@utils/generate-password'
 import { randomUUID } from 'crypto'
 import { Request, Response } from 'express'
 
@@ -26,6 +27,7 @@ export async function createStudent(
     return
   }
 
+  // const password = generatePassword()
   const passwordEncrypt = await encrytPassword('123456')
 
   const student = {
@@ -35,14 +37,14 @@ export async function createStudent(
     passwordHash: passwordEncrypt,
     birthdate: new Date(birthdate),
     active: true,
-    createdAT: new Date(),
-    updatedAT: new Date(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
   }
 
   db.create('students', student)
 
   response.status(201).json({
-    result: 'sucess',
-    message: 'Students profile created',
+    result: 'success',
+    message: 'Student profile created',
   })
 }

@@ -1,1 +1,64 @@
-{}
+{
+  "students": [
+    {
+      "id": "63befa51-a9dd-4d50-8fd5-36c2558402c0",
+      "ra": "RA123456789",
+      "name": "Natan Foleto",
+      "passwordHash": "$2b$10$e89.ODxBpuA2FN1obtQ.De0rdmlGElMJPpLU7sfEVJpsPCqIW/Y3a",
+      "birthdate": "1999-07-10T00:00:00.000Z",
+      "active": true,
+      "createdAt": "2024-10-17T23:47:15.741Z",
+      "updatedAt": "2024-10-17T23:47:15.742Z"
+    },
+    {
+      "id": "5435e879-45d9-4724-a515-358dab5776cd",
+      "ra": "RA987654321",
+      "name": "Kaique Com K",
+      "passwordHash": "$2b$10$yce4cjqShEXoHQwI8vKZJ.JF6mfjAClnlzQZpe2o5hcBuyirI7ppm",
+      "birthdate": "1999-07-10T00:00:00.000Z",
+      "active": true,
+      "createdAt": "2024-10-18T01:03:57.459Z",
+      "updatedAt": "2024-10-18T01:03:57.459Z"
+    },
+    {
+      "id": "1cf31999-e034-4495-9310-c9b70b7af95b",
+      "ra": "RA456789132",
+      "name": "Xuxu",
+      "passwordHash": "$2b$10$S.q3U8or2wg2WPhSKOZEeeamMJ9wXoxtad57YAod3DwdP66GP.hUm",
+      "birthdate": "1999-07-10T00:00:00.000Z",
+      "active": true,
+      "createdAt": "2024-10-18T01:04:35.072Z",
+      "updatedAt": "2024-10-18T01:04:35.072Z"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1188429b-5b57-4a02-b176-ab287c1e1669",
+      "studentId": "63befa51-a9dd-4d50-8fd5-36c2558402c0",
+      "content": "Cortei o pulso galera!",
+      "active": true,
+      "publishedAt": "2024-10-17T23:48:43.544Z",
+      "updatedAt": null
+    }
+  ],
+  "comments": [
+    {
+      "id": "988b5441-6058-4d3e-a196-5da878683180",
+      "studentId": "63befa51-a9dd-4d50-8fd5-36c2558402c0",
+      "postId": "1188429b-5b57-4a02-b176-ab287c1e1669",
+      "content": "Eu sou dono do post",
+      "active": false,
+      "commentedAt": "2024-10-18T01:06:42.370Z",
+      "updatedAt": "2024-10-18T01:08:23.640Z"
+    },
+    {
+      "id": "a04943a3-8f6e-43f8-a554-57b591e494de",
+      "studentId": "1cf31999-e034-4495-9310-c9b70b7af95b",
+      "postId": "1188429b-5b57-4a02-b176-ab287c1e1669",
+      "content": "Oi eu sou o xuxu!",
+      "active": false,
+      "commentedAt": "2024-10-18T01:06:56.713Z",
+      "updatedAt": "2024-10-18T01:10:17.752Z"
+    }
+  ]
+}

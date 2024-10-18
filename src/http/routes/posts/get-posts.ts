@@ -8,7 +8,7 @@ export async function getPosts(
   const posts = db.findMany('posts', { active: true })
 
   response.json({
-    result: 'sucess',
+    result: 'success',
     data: posts,
   })
 }

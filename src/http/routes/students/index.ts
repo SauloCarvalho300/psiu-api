@@ -1,6 +1,6 @@
+import { authentication } from '@http/middlewares/auth'
 import { Router } from 'express'
 
-import { authentication } from '../../middlewares/auth'
 import { createStudent } from './create-student'
 import { getStudents } from './get-students'
 import { inactivateStudent } from './inactivate-student'
@@ -12,7 +12,7 @@ userRouter.post('/', createStudent)
 
 userRouter.use(authentication)
 
-userRouter.get('/', getStudents)
+userRouter.get('/', authentication, getStudents)
 userRouter.put('/', updateStudent)
 userRouter.delete('/', inactivateStudent)
 

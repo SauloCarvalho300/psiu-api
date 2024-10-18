@@ -1,9 +1,9 @@
+import { authentication } from '@http/middlewares/auth'
 import { Router } from 'express'
 
-import { authentication } from '../../middlewares/auth'
 import { createPost } from './create-post'
-import { getPostByStudent } from './get-post-by-student'
 import { getPosts } from './get-posts'
+import { getPostsByStudent } from './get-posts-by-student'
 import { inactivatePost } from './inactivate-post'
 import { updatePost } from './update-post'
 
@@ -13,8 +13,8 @@ postRouter.use(authentication)
 
 postRouter.post('/', createPost)
 postRouter.get('/', getPosts)
+postRouter.get('/student/:studentId', getPostsByStudent)
 postRouter.put('/:postId', updatePost)
 postRouter.delete('/:postId', inactivatePost)
-postRouter.get('/student/:studentId', getPostByStudent)
 
 export { postRouter }

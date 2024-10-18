@@ -18,9 +18,9 @@ export async function updatePassword(
   const student = db.findUnique('students', { id: studentId })
 
   if (!student) {
-    response.status(401).json({
+    response.status(400).json({
       result: 'error',
-      message: ' Student not found',
+      message: 'Student not found',
     })
 
     return
@@ -31,7 +31,7 @@ export async function updatePassword(
   if (!passwordMatch) {
     response.status(401).json({
       result: 'error',
-      message: 'Incorrect password ',
+      message: 'Incorrect password',
     })
 
     return
@@ -40,7 +40,7 @@ export async function updatePassword(
   if (newPassword !== confirmNewPassword) {
     response.status(400).json({
       result: 'error',
-      message: 'Passwords do not macth',
+      message: 'Passwords do not match',
     })
 
     return
@@ -63,11 +63,11 @@ export async function updatePassword(
 
   db.update('students', studentId, {
     passwordHash: passwordEncrypt,
-    updatedAT: new Date(),
+    updatedAt: new Date(),
   })
 
-  response.status(400).json({
+  response.json({
     result: 'success',
-    message: 'Passwords updated',
+    message: 'Password updated',
   })
 }
