@@ -39,6 +39,27 @@
       "active": true,
       "publishedAt": "2024-10-17T23:48:43.544Z",
       "updatedAt": null
+    },
+    {
+      "id": "5a5da4a9-de1b-4aab-997a-834b98f9f368",
+      "studentId": "5435e879-45d9-4724-a515-358dab5776cd",
+      "active": true,
+      "publishedAt": "2024-10-19T01:10:50.969Z",
+      "updatedAt": null
+    },
+    {
+      "id": "66bdfe53-527e-4f12-a7e6-8dfb86f0bd8e",
+      "studentId": "5435e879-45d9-4724-a515-358dab5776cd",
+      "active": true,
+      "publishedAt": "2024-10-19T01:11:42.063Z",
+      "updatedAt": null
+    },
+    {
+      "id": "ce507065-2abc-421d-8ad9-7a84f8cc1bc0",
+      "studentId": "5435e879-45d9-4724-a515-358dab5776cd",
+      "active": true,
+      "publishedAt": "2024-10-19T01:12:32.325Z",
+      "updatedAt": null
     }
   ],
   "comments": [
@@ -47,7 +68,7 @@
       "studentId": "63befa51-a9dd-4d50-8fd5-36c2558402c0",
       "postId": "1188429b-5b57-4a02-b176-ab287c1e1669",
       "content": "Eu sou dono do post",
-      "active": false,
+      "active": true,
       "commentedAt": "2024-10-18T01:06:42.370Z",
       "updatedAt": "2024-10-18T01:08:23.640Z"
     },
