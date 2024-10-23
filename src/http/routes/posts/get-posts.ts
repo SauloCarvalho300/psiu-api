@@ -7,8 +7,9 @@ export async function getPosts(
 ): Promise<void> {
   const posts = db.findMany('posts', { active: true })
 
-  const postsWithComments = posts.map((post) => {
+  const postsResponse = posts.map((post) => {
     const comments = db.findMany('comments', { postId: post.id, active: true })
+    const reactions = db.findMany('posts_reacrions', { postId: post.id })
 
     const summaryComments = comments.map((comment) => ({
       id: comment.id,
@@ -16,6 +17,13 @@ export async function getPosts(
       content: comment.content,
       contentedAt: comment.comentedAt,
       updatedAt: comment.updatedAt,
+    }))
+
+    const summaryReactions = reactions.map((reaction) => ({
+      id: reaction.id,
+      content: reaction.content,
+      publishedAt: reaction.publishedAt,
+      updatedAt: reaction.updatedAt,
     }))
 
     const summaryPost = {
@@ -26,11 +34,15 @@ export async function getPosts(
       updatedAt: post.updatedAt,
     }
 
-    return { ...summaryPost, comments: summaryComments }
+    return {
+      ...summaryPost,
+      comments: summaryComments,
+      reactions: summaryReactions,
+    }
   })
 
   response.json({
     result: 'success',
-    data: postsWithComments,
+    data: postsResponse,
   })
 }

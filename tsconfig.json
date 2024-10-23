@@ -19,6 +19,9 @@
       "@database/*": [
         "./src/database/*"
       ],
+      "@enums/*": [
+        "./src/enums/*"
+      ],
       "@http/*": [
         "./src/http/*"
       ],

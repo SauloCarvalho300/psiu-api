@@ -12,6 +12,6 @@ router.use('/authenticate', authRouter)
 router.use('/student', userRouter)
 router.use('/post', postRouter)
 router.use('/comment', commentRouter)
-router.use('/reactions', reactionRouter)
+router.use('/reaction', reactionRouter)
 
 export { router }

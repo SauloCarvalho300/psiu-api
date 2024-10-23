@@ -1,14 +1,7 @@
 import { db } from '@database/client'
 import { randomUUID } from 'crypto'
 import { Request, Response } from 'express'
-
-enum EnumTypeReaction {
-  APOIO,
-  ENTENDO_VOCE,
-  FORCA,
-  TRISTEZA,
-  ESTAMOS_JUNTOS,
-}
+import { EnumTypeReaction } from 'src/enums/enum-type-reactions'
 
 interface Params {
   postId: string
@@ -33,6 +26,7 @@ export async function createPostReaction(
       result: 'error',
       message: 'Post not found',
     })
+    return
   }
 
   const postReaction = db.findUnique('posts_reactions', {

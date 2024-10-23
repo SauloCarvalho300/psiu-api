@@ -81,5 +81,14 @@
       "commentedAt": "2024-10-18T01:06:56.713Z",
       "updatedAt": "2024-10-18T01:10:17.752Z"
     }
+  ],
+  "posts_reactions": [
+    {
+      "id": "f57fb81a-9b56-4957-8165-ad9a6d2fb0da",
+      "studentId": "5435e879-45d9-4724-a515-358dab5776cd",
+      "postId": "1188429b-5b57-4a02-b176-ab287c1e1669",
+      "type": "ENTENDO_VOCE",
+      "reactedAt": "2024-10-23T01:15:46.249Z"
+    }
   ]
 }

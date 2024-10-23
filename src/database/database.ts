@@ -92,4 +92,16 @@ export class Database {
   }
 
   // DELETE
+  delete(table: string, id: string | number): Row | null {
+    const rowIndex = this.#database[table].findIndex((row) => row.id === id)
+
+    if (rowIndex > -1) {
+      const [deletedRow] = this.#database[table].splice(rowIndex, 1)
+      this.#persist()
+
+      return deletedRow
+    }
+
+    return null
+  }
 }
