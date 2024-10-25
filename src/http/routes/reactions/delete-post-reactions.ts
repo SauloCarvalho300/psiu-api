@@ -34,6 +34,6 @@ export async function deletePostReaction(
 
   response.status(201).json({
     result: 'success',
-    message: 'Post removed',
+    message: 'Post Reaction removed',
   })
 }
