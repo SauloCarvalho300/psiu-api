@@ -1,1 +1,53 @@
-{}
+{
+  "students": [
+    {
+      "id": "31a97885-c9e6-40f8-93b8-b54d71849435",
+      "ra": "RA456789132",
+      "name": "Kaique Com K",
+      "passwordHash": "$2b$10$8H3ghSCZ5mlaEPCGnhG93OJOHDfdCfo2wrUeRKsjfiJEEn.LSx9bu",
+      "birthdate": "1999-07-10T00:00:00.000Z",
+      "active": true,
+      "createdAt": "2024-10-23T00:58:26.912Z",
+      "updatedAt": "2024-10-23T00:58:26.912Z"
+    }
+  ],
+  "posts": [
+    {
+      "id": "cfa9570f-8709-4a2c-b49e-2c85e1bcdbdd",
+      "studentId": "31a97885-c9e6-40f8-93b8-b54d71849435",
+      "content": "Cortei o pulso galera!",
+      "active": true,
+      "publishedAt": "2024-10-23T00:59:25.784Z",
+      "updatedAt": null
+    }
+  ],
+  "posts_reactions": [
+    {
+      "id": "bb1d17d6-d34c-4728-b6c6-27c6fac11728",
+      "studentId": "31a97885-c9e6-40f8-93b8-b54d71849435",
+      "postId": "cfa9570f-8709-4a2c-b49e-2c85e1bcdbdd",
+      "type": "ENTENDO_VOCE",
+      "reactedAt": "2024-10-23T00:59:52.167Z"
+    }
+  ],
+  "comments": [
+    {
+      "id": "ad99bf8a-533f-4b01-8f1b-9820725b289d",
+      "studentId": "31a97885-c9e6-40f8-93b8-b54d71849435",
+      "postId": "cfa9570f-8709-4a2c-b49e-2c85e1bcdbdd",
+      "content": "Comentário 335",
+      "active": true,
+      "commentedAt": "2024-10-23T01:01:03.864Z",
+      "updatedAt": null
+    }
+  ],
+  "comments_reactions": [
+    {
+      "id": "c09b0845-488d-4046-9fdc-9f741dbd21b3",
+      "studentId": "31a97885-c9e6-40f8-93b8-b54d71849435",
+      "commentId": "ad99bf8a-533f-4b01-8f1b-9820725b289d",
+      "type": "ENTENDO_VOCE",
+      "reactedAt": "2024-10-30T23:18:06.302Z"
+    }
+  ]
+}

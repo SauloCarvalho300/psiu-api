@@ -27,7 +27,7 @@ export class Database {
   }
 
   #persist(): void {
-    fs.writeFile(databasePath, JSON.stringify(this.#database))
+    fs.writeFile(databasePath, JSON.stringify(this.#database, null, 2))
   }
 
   // SELECT MANY

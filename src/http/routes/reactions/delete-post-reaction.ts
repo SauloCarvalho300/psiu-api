@@ -5,14 +5,14 @@ interface Params {
   reactionId: string
 }
 
-export async function deleteCommentReaction(
+export async function deletePostReaction(
   request: Request<Params>,
   response: Response,
 ) {
   const { studentId } = request
   const { reactionId } = request.params
 
-  const reaction = db.findUnique('comments_reactions', { id: reactionId })
+  const reaction = db.findUnique('posts_reactions', { id: reactionId })
 
   if (!reaction) {
     response.status(400).json({
@@ -32,7 +32,7 @@ export async function deleteCommentReaction(
     return
   }
 
-  db.delete('comments_reactions', reactionId)
+  db.delete('posts_reactions', reactionId)
 
   response.json({
     result: 'success',

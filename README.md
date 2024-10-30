@@ -23,7 +23,7 @@
   - [x] Não deve ser possível deletar um student inativo
   
 - [x] Buscar alunos
-  - [] Criar páginação na busca de alunos
+  - [] Criar páginação
 
 ### Autenticação
 
@@ -43,30 +43,35 @@
   - [x] Dever ser possível editar o conteúdo do post
 - [x] Deletar post
 - [x] Buscar posts
- - [X] Incluir comentários
- - [X] Incluir reações
- - [] Criar paginação
+  - [x] Incluir comentários
+    - [] Incluir reações
+  - [x] Incluir reações
+  - [] Criar páginação
 - [x] Buscar posts por aluno
- - [] Criar paginação
+  - [] Criar páginação
 
 ### ComentarioPost
 
-- [X] Criar comentário
-- [X] Editar comentário
-- [X] Deletar comentário
+- [x] Criar comentário
+- [x] Editar comentário
+- [x] Deletar comentário
 
 ### ReacaoPost
 
-- [] Criar reação para post/comentários
-  - [] Remover reação 
-  - [] Apoio ❤️
-  - [] Entendo você 👐
-  - [] Força 💪
-  - [] Tristeza 😢
-  - [] Estamos juntos 🤝
-- [] Deletar reação
+- [x] Criar reação para o post/comentário
+  - [x] Apoio ❤️
+  - [x] Entendo você 👐
+  - [x] Força 💪
+  - [x] Tristeza 😢
+  - [x] Estamos juntos 🤝
+- [x] Deletar reação post/comentário
 
 ### ReacaoComentario
 
-- [] Criar reação
-- [] Deletar reação
+- [x] Criar reação
+  - [x] Apoio ❤️
+  - [x] Entendo você 👐
+  - [x] Força 💪
+  - [x] Tristeza 😢
+  - [x] Estamos juntos 🤝
+- [x] Deletar reação

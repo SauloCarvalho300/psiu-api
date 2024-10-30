@@ -1,7 +1,7 @@
 import { db } from '@database/client'
+import { EnumTypeReaction } from '@enums/enum-type-reaction'
 import { randomUUID } from 'crypto'
 import { Request, Response } from 'express'
-import { EnumTypeReaction } from 'src/enums/enum-type-reactions'
 
 interface Params {
   commentId: string
@@ -24,8 +24,9 @@ export async function createCommentReaction(
   if (!comment) {
     response.status(400).json({
       result: 'error',
-      message: 'comment not found',
+      message: 'Comment not found',
     })
+
     return
   }
 

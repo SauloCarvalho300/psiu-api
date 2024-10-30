@@ -15,26 +15,25 @@ export async function getPostsByStudent(
 
   const postsResponse = posts.map((post) => {
     const comments = db.findMany('comments', { postId: post.id, active: true })
-    const reactions = db.findMany('posts_reacrions', { postId: post.id })
+    const reactions = db.findMany('posts_reactions', { postId: post.id })
 
     const summaryComments = comments.map((comment) => ({
       id: comment.id,
       postId: comment.postId,
       content: comment.content,
-      contentedAt: comment.comentedAt,
+      commentedAt: comment.commentedAt,
       updatedAt: comment.updatedAt,
     }))
 
     const summaryReactions = reactions.map((reaction) => ({
       id: reaction.id,
-      content: reaction.content,
-      publishedAt: reaction.publishedAt,
-      updatedAt: reaction.updatedAt,
+      postId: reaction.postId,
+      type: reaction.type,
+      reactedAt: reaction.reactedAt,
     }))
 
     const summaryPost = {
       id: post.id,
-      studentId: post.studentId,
       content: post.content,
       publishedAt: post.publishedAt,
       updatedAt: post.updatedAt,

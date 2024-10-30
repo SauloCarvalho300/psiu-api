@@ -1,7 +1,7 @@
 import { db } from '@database/client'
+import { EnumTypeReaction } from '@enums/enum-type-reaction'
 import { randomUUID } from 'crypto'
 import { Request, Response } from 'express'
-import { EnumTypeReaction } from 'src/enums/enum-type-reactions'
 
 interface Params {
   postId: string
@@ -26,6 +26,7 @@ export async function createPostReaction(
       result: 'error',
       message: 'Post not found',
     })
+
     return
   }
 
