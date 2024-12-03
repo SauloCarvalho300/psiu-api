@@ -47,10 +47,17 @@ export async function authenticateWithPassword(
 
   const token = sign({ id: student.id }, 'psiu', { expiresIn: '3d' })
 
+  // Seta o token no cookie do response
+  response.cookie('token', token, {
+    httpOnly: true,
+    sameSite: 'lax',
+    maxAge: 7 * 24 * 60 * 60 * 1000,
+  })
+
   response.json({
     result: 'success',
+    message: 'Logado com sucesso!',
     data: {
-      token,
       student: {
         id: student.id,
         ra: student.ra,

@@ -1,53 +1,95 @@
 {
   "students": [
     {
-      "id": "31a97885-c9e6-40f8-93b8-b54d71849435",
-      "ra": "RA456789132",
-      "name": "Kaique Com K",
-      "passwordHash": "$2b$10$8H3ghSCZ5mlaEPCGnhG93OJOHDfdCfo2wrUeRKsjfiJEEn.LSx9bu",
+      "id": "0d97912d-77ac-47a4-a086-655b383a71f2",
+      "ra": "RA1",
+      "name": "Natan Foleto",
+      "passwordHash": "$2b$10$0Vvs8SrIZdjlSb2vesBUV.t0wzbzbk6W9k5Vnz4jGQnbMYeJDq/CW",
       "birthdate": "1999-07-10T00:00:00.000Z",
       "active": true,
-      "createdAt": "2024-10-23T00:58:26.912Z",
-      "updatedAt": "2024-10-23T00:58:26.912Z"
+      "createdAt": "2024-11-22T01:00:26.962Z",
+      "updatedAt": "2024-11-22T01:00:26.962Z"
+    },
+    {
+      "id": "2bb0d081-c386-4eaf-8267-9f56c5a5735e",
+      "ra": "RA2",
+      "name": "Lineker",
+      "passwordHash": "$2b$10$DqxZhNtQVIqsGRO4NaLvoeCP/q8hYY06zuKP2oks5evZvuHlLuUIm",
+      "birthdate": "1999-07-10T00:00:00.000Z",
+      "active": true,
+      "createdAt": "2024-11-23T02:13:18.786Z",
+      "updatedAt": "2024-11-23T02:13:18.786Z"
     }
   ],
   "posts": [
     {
-      "id": "cfa9570f-8709-4a2c-b49e-2c85e1bcdbdd",
-      "studentId": "31a97885-c9e6-40f8-93b8-b54d71849435",
-      "content": "Cortei o pulso galera!",
+      "id": "3d64b321-6fc1-4082-9c8a-4d076168a2c3",
+      "studentId": "2bb0d081-c386-4eaf-8267-9f56c5a5735e",
+      "content": "Post do RA2",
       "active": true,
-      "publishedAt": "2024-10-23T00:59:25.784Z",
+      "publishedAt": "2024-11-28T23:51:57.107Z",
+      "updatedAt": null
+    },
+    {
+      "id": "74ac0b39-21dc-4c3c-8c92-b4226dd9f5c9",
+      "studentId": "0d97912d-77ac-47a4-a086-655b383a71f2",
+      "content": "Post do RA1",
+      "active": true,
+      "publishedAt": "2024-11-28T23:52:09.563Z",
+      "updatedAt": null
+    },
+    {
+      "id": "5c6b6187-8aca-43d9-b680-d52102c2f5ff",
+      "studentId": "0d97912d-77ac-47a4-a086-655b383a71f2",
+      "content": "Olá mundo!",
+      "active": true,
+      "publishedAt": "2024-11-29T01:20:02.520Z",
+      "updatedAt": null
+    }
+  ],
+  "comments": [
+    {
+      "id": "49aaad89-464d-4fc2-bfe8-2275ce167c81",
+      "studentId": "0d97912d-77ac-47a4-a086-655b383a71f2",
+      "postId": "5c6b6187-8aca-43d9-b680-d52102c2f5ff",
+      "content": "Comentário 10",
+      "active": true,
+      "commentedAt": "2024-11-29T01:28:30.003Z",
+      "updatedAt": null
+    },
+    {
+      "id": "ba3de812-798a-4c48-a44e-ee2236f5ef0d",
+      "studentId": "0d97912d-77ac-47a4-a086-655b383a71f2",
+      "postId": "5c6b6187-8aca-43d9-b680-d52102c2f5ff",
+      "content": "Comentário 2",
+      "active": true,
+      "commentedAt": "2024-11-29T01:29:54.201Z",
       "updatedAt": null
     }
   ],
   "posts_reactions": [
     {
-      "id": "bb1d17d6-d34c-4728-b6c6-27c6fac11728",
-      "studentId": "31a97885-c9e6-40f8-93b8-b54d71849435",
-      "postId": "cfa9570f-8709-4a2c-b49e-2c85e1bcdbdd",
-      "type": "ENTENDO_VOCE",
-      "reactedAt": "2024-10-23T00:59:52.167Z"
-    }
-  ],
-  "comments": [
+      "id": "5d8786f1-8b9b-4d60-9a26-a76ad1f7feca",
+      "studentId": "0d97912d-77ac-47a4-a086-655b383a71f2",
+      "postId": "5c6b6187-8aca-43d9-b680-d52102c2f5ff",
+      "type": 2,
+      "reactedAt": "2024-12-02T23:47:09.375Z"
+    },
     {
-      "id": "ad99bf8a-533f-4b01-8f1b-9820725b289d",
-      "studentId": "31a97885-c9e6-40f8-93b8-b54d71849435",
-      "postId": "cfa9570f-8709-4a2c-b49e-2c85e1bcdbdd",
-      "content": "Comentário 335",
-      "active": true,
-      "commentedAt": "2024-10-23T01:01:03.864Z",
-      "updatedAt": null
+      "id": "b621fbd0-b5e3-493f-9b3d-bdb875e4dd9f",
+      "studentId": "0d97912d-77ac-47a4-a086-655b383a71f2",
+      "postId": "74ac0b39-21dc-4c3c-8c92-b4226dd9f5c9",
+      "type": 4,
+      "reactedAt": "2024-12-02T23:47:13.980Z"
     }
   ],
   "comments_reactions": [
     {
-      "id": "c09b0845-488d-4046-9fdc-9f741dbd21b3",
-      "studentId": "31a97885-c9e6-40f8-93b8-b54d71849435",
-      "commentId": "ad99bf8a-533f-4b01-8f1b-9820725b289d",
-      "type": "ENTENDO_VOCE",
-      "reactedAt": "2024-10-30T23:18:06.302Z"
+      "id": "6d437a7b-0e76-4e31-ad91-f4cf800297f8",
+      "studentId": "0d97912d-77ac-47a4-a086-655b383a71f2",
+      "commentId": "49aaad89-464d-4fc2-bfe8-2275ce167c81",
+      "type": 4,
+      "reactedAt": "2024-12-03T01:22:45.548Z"
     }
   ]
 }

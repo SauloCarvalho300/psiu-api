@@ -41,11 +41,18 @@ export async function createPostReaction(
         type,
       })
 
-      return
-    } else {
       response.status(201).json({
         result: 'success',
         message: 'Post reacted',
+      })
+
+      return
+    } else {
+      db.delete('posts_reactions', postReaction.id)
+
+      response.status(201).json({
+        result: 'success',
+        message: 'Reaction removed',
       })
 
       return
