@@ -23,7 +23,7 @@ export async function createComment(
   if (!post) {
     response.status(400).json({
       result: 'error',
-      message: 'Post not found',
+      message: 'Post não encontrado',
     })
 
     return
@@ -41,6 +41,6 @@ export async function createComment(
 
   response.status(201).json({
     result: 'success',
-    message: 'Comment created',
+    message: 'Comentário criado',
   })
 }

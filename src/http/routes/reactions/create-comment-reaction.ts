@@ -24,7 +24,7 @@ export async function createCommentReaction(
   if (!comment) {
     response.status(400).json({
       result: 'error',
-      message: 'Comment not found',
+      message: 'Comentário não encontrado',
     })
 
     return
@@ -43,7 +43,7 @@ export async function createCommentReaction(
 
       response.status(201).json({
         result: 'success',
-        message: 'Comment reacted',
+        message: 'Comment reagido',
       })
 
       return
@@ -52,7 +52,7 @@ export async function createCommentReaction(
 
       response.status(201).json({
         result: 'success',
-        message: 'Reaction moved',
+        message: 'Reação removida',
       })
 
       return
@@ -69,6 +69,6 @@ export async function createCommentReaction(
 
   response.status(201).json({
     result: 'success',
-    message: 'Comment reacted',
+    message: 'Comentário reagido',
   })
 }

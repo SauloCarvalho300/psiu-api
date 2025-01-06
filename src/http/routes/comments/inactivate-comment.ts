@@ -17,7 +17,7 @@ export async function inactivateComment(
   if (!comment) {
     response.status(400).json({
       result: 'error',
-      message: 'Comment not found',
+      message: 'Comentário não encontrado',
     })
 
     return
@@ -28,7 +28,7 @@ export async function inactivateComment(
   if (!post) {
     response.status(400).json({
       result: 'error',
-      message: 'The post for this comment was not found',
+      message: 'O post desse comentário não foi encontrado',
     })
 
     return
@@ -37,7 +37,7 @@ export async function inactivateComment(
   if (comment.studentId !== studentId && post.studentId !== studentId) {
     response.status(401).json({
       result: 'error',
-      message: 'Operation not allowed',
+      message: 'Operação não autorizada',
     })
 
     return
@@ -50,6 +50,6 @@ export async function inactivateComment(
 
   response.json({
     result: 'success',
-    message: 'Comment deleted',
+    message: 'Comentário deletado',
   })
 }

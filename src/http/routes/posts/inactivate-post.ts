@@ -17,7 +17,7 @@ export async function inactivatePost(
   if (!post) {
     response.status(400).json({
       result: 'error',
-      message: 'Post not found',
+      message: 'Post não encontrado',
     })
 
     return
@@ -26,7 +26,7 @@ export async function inactivatePost(
   if (post.studentId !== studentId) {
     response.status(401).json({
       result: 'error',
-      message: 'Operation not allowed',
+      message: 'Operação não autorizada',
     })
 
     return
@@ -39,6 +39,6 @@ export async function inactivatePost(
 
   response.json({
     result: 'success',
-    message: 'Post deleted',
+    message: 'Post deletado',
   })
 }

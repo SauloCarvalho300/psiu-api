@@ -24,6 +24,6 @@ export async function createPost(
 
   response.status(201).json({
     result: 'success',
-    message: 'Post created',
+    message: 'Post criado',
   })
 }

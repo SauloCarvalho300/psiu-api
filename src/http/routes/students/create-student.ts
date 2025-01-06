@@ -21,7 +21,7 @@ export async function createStudent(
   if (studentByRa.length) {
     response.status(400).json({
       result: 'error',
-      message: `Students register ${ra} already exists`,
+      message: `Já existe um estudante com o RA: ${ra}`,
     })
 
     return
@@ -45,6 +45,6 @@ export async function createStudent(
 
   response.status(201).json({
     result: 'success',
-    message: 'Student profile created',
+    message: 'Estudando criado',
   })
 }

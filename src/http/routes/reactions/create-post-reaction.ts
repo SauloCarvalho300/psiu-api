@@ -24,7 +24,7 @@ export async function createPostReaction(
   if (!post) {
     response.status(400).json({
       result: 'error',
-      message: 'Post not found',
+      message: 'Post não encontrado',
     })
 
     return
@@ -43,7 +43,7 @@ export async function createPostReaction(
 
       response.status(201).json({
         result: 'success',
-        message: 'Post reacted',
+        message: 'Post reagido',
       })
 
       return
@@ -52,7 +52,7 @@ export async function createPostReaction(
 
       response.status(201).json({
         result: 'success',
-        message: 'Reaction removed',
+        message: 'Reação removida',
       })
 
       return
@@ -69,6 +69,6 @@ export async function createPostReaction(
 
   response.status(201).json({
     result: 'success',
-    message: 'Post reacted',
+    message: 'Post reagido',
   })
 }

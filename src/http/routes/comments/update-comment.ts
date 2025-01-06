@@ -22,7 +22,7 @@ export async function updateComment(
   if (!comment) {
     response.status(400).json({
       result: 'error',
-      message: 'Comment not found',
+      message: 'Comentário não encontrado',
     })
 
     return
@@ -31,7 +31,7 @@ export async function updateComment(
   if (comment.studentId !== studentId) {
     response.status(401).json({
       result: 'error',
-      message: 'Operation not allowed',
+      message: 'Operação não autorizada',
     })
 
     return
@@ -44,6 +44,6 @@ export async function updateComment(
 
   response.json({
     result: 'success',
-    message: 'Comment upated',
+    message: 'Comentário atualizado',
   })
 }

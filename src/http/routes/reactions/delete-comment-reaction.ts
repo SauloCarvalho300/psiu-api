@@ -17,7 +17,7 @@ export async function deleteCommentReaction(
   if (!reaction) {
     response.status(400).json({
       result: 'error',
-      message: 'Reaction not found',
+      message: 'Reação não encontrada',
     })
 
     return
@@ -26,7 +26,7 @@ export async function deleteCommentReaction(
   if (reaction.studentId !== studentId) {
     response.status(401).json({
       result: 'error',
-      message: 'Operation not allowed',
+      message: 'Operação não autorizada',
     })
 
     return
@@ -36,6 +36,6 @@ export async function deleteCommentReaction(
 
   response.json({
     result: 'success',
-    message: 'Reaction removed',
+    message: 'Reação removida',
   })
 }

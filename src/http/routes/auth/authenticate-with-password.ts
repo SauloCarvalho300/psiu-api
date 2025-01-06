@@ -19,7 +19,7 @@ export async function authenticateWithPassword(
   if (!student) {
     response.status(401).json({
       result: 'error',
-      message: 'RA or password incorrect',
+      message: 'RA ou senha incorretos',
     })
 
     return
@@ -28,7 +28,7 @@ export async function authenticateWithPassword(
   if (!student.active) {
     response.status(401).json({
       result: 'error',
-      message: 'RA or password incorrect',
+      message: 'RA ou senha incorretos',
     })
 
     return
@@ -39,7 +39,7 @@ export async function authenticateWithPassword(
   if (!passwordMatch) {
     response.status(401).json({
       result: 'error',
-      message: 'RA or password incorrect',
+      message: 'RA ou senha incorretos',
     })
 
     return

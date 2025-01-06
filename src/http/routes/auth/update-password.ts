@@ -20,7 +20,7 @@ export async function updatePassword(
   if (!student) {
     response.status(400).json({
       result: 'error',
-      message: 'Student not found',
+      message: 'Estudante não encontrado',
     })
 
     return
@@ -31,7 +31,7 @@ export async function updatePassword(
   if (!passwordMatch) {
     response.status(401).json({
       result: 'error',
-      message: 'Incorrect password',
+      message: 'Senha incorreta',
     })
 
     return
@@ -40,7 +40,7 @@ export async function updatePassword(
   if (newPassword !== confirmNewPassword) {
     response.status(400).json({
       result: 'error',
-      message: 'Passwords do not match',
+      message: 'As senhas não deram match',
     })
 
     return
@@ -53,7 +53,7 @@ export async function updatePassword(
   ) {
     response.status(400).json({
       result: 'error',
-      message: 'The new password is weak',
+      message: 'A nova senha é fraca',
     })
 
     return
@@ -68,6 +68,6 @@ export async function updatePassword(
 
   response.json({
     result: 'success',
-    message: 'Password updated',
+    message: 'Senha atualizada',
   })
 }

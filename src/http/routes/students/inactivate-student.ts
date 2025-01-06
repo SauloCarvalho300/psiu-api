@@ -12,7 +12,7 @@ export async function inactivateStudent(
   if (!student) {
     response.status(400).json({
       result: 'error',
-      message: 'Student not found',
+      message: 'Estudante não encontrado',
     })
 
     return
@@ -25,6 +25,6 @@ export async function inactivateStudent(
 
   response.json({
     result: 'success',
-    message: 'Student deleted',
+    message: 'Estudante deletado',
   })
 }

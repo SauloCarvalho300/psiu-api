@@ -18,7 +18,7 @@ export async function updateStudent(
   if (!student) {
     response.status(400).json({
       result: 'error',
-      message: 'Student not found',
+      message: 'Estudante não encontrado',
     })
 
     return
@@ -32,6 +32,6 @@ export async function updateStudent(
 
   response.json({
     result: 'success',
-    message: 'Student upated',
+    message: 'Dados atualizados',
   })
 }
