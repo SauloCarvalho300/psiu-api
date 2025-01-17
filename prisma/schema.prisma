@@ -1,0 +1,88 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Student {
+  id           String   @id @default(uuid())
+  ra           String   @unique
+  name         String
+  passwordHash String   @map("password_hash")
+  birthdate    DateTime
+  active       Boolean  @default(true)
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  posts             Post[]
+  comments          Comment[]
+  posts_reactions   PostsReaction[]
+  comment_reactions CommentReaction[]
+
+  @@map("students")
+}
+
+model Post {
+  id        String   @id @default(uuid())
+  content   String
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now()) @map("published_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  owner   Student @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  ownerId String  @map("owner_id")
+
+  comments  Comment[]
+  reactions PostsReaction[]
+
+  @@map("posts")
+}
+
+model Comment {
+  id          String   @id @default(uuid())
+  content     String
+  active      Boolean  @default(true)
+  commentedAt DateTime @default(now()) @map("commented_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  owner   Student @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  ownerId String  @map("owner_id")
+
+  post   Post   @relation(fields: [postId], references: [id], onDelete: Cascade)
+  postId String @map("post_id")
+
+  reactions CommentReaction[]
+
+  @@map("comments")
+}
+
+model PostsReaction {
+  id        String   @id @default(uuid())
+  type      Int
+  reactedAt DateTime @default(now()) @map("reacted_at")
+
+  owner   Student @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  ownerId String  @map("owner_id")
+
+  post   Post   @relation(fields: [postId], references: [id], onDelete: Cascade)
+  postId String @map("post_id")
+
+  @@map("posts_reactions")
+}
+
+model CommentReaction {
+  id        String   @id @default(uuid())
+  type      Int
+  reactedAt DateTime @default(now()) @map("reacted_at")
+
+  owner   Student @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  ownerId String  @map("owner_id")
+
+  comment   Comment @relation(fields: [commentId], references: [id], onDelete: Cascade)
+  commentId String
+
+  @@map("comment_reactions")
+}
